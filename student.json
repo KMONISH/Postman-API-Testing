@@ -1,0 +1,119 @@
+{
+  "students": [
+    {
+      "id": "001",
+      "firstName": "Bhavik",
+      "lastName": "Taneja",
+      "fullName": "Bhavik Taneja",
+      "fatherName": "Mr. Dinesh Taneja",
+      "grades": [
+        2.3,
+        4.3,
+        5
+      ],
+      "age": 15,
+      "class": "10"
+    },
+    {
+      "id": "003",
+      "firstName": "Arvind",
+      "lastName": "Gaur",
+      "fullName": "Arvind Gaur",
+      "fatherName": "Mr. L. S. Gaur",
+      "grades": [
+        2.5,
+        3.3,
+        4
+      ],
+      "age": 18,
+      "class": "12"
+    },
+    {
+      "id": "002",
+      "firstName": "Bharat",
+      "lastName": "Badera",
+      "fullName": "Bharat Badera",
+      "fatherName": "R Badea",
+      "grades": [
+        2.1,
+        4.6,
+        4
+      ],
+      "age": 14,
+      "class": "9"
+    },
+    {
+      "id": "2e4f"
+    },
+    {
+      "id": "1f42",
+      "firstName": "Amit",
+      "lastName": "Tek",
+      "fullName": "Amit Tek",
+      "fatherName": "Mr. A.K. Tek",
+      "grades": [
+        2,
+        4,
+        4
+      ],
+      "age": 18,
+      "class": "12"
+    },
+    {
+      "id": "f8b8",
+      "firstName": "Monish",
+      "lastName": "Tek",
+      "fullName": "Amit Tek",
+      "fatherName": "Mr.Tek",
+      "grades": [
+        2,
+        1,
+        4
+      ],
+      "age": 18,
+      "class": "15"
+    },
+    {
+      "id": "9f58",
+      "firstName": "Monish",
+      "lastName": "Tek",
+      "fullName": "Amit Tek",
+      "fatherName": "Mr.Tek",
+      "grades": [
+        2,
+        1,
+        4
+      ],
+      "age": 18,
+      "class": "15"
+    },
+    {
+      "id": "ea42",
+      "firstName": "Monish",
+      "lastName": "Tek",
+      "fullName": "Amit Tek",
+      "fatherName": "Tek",
+      "grades": [
+        2,
+        1,
+        4
+      ],
+      "age": 18,
+      "class": "15"
+    },
+    {
+      "id": "baf2",
+      "firstName": "Testing API",
+      "lastName": "Tekfa",
+      "fullName": "Amit Tekfa",
+      "fatherName": "Tekfa",
+      "grades": [
+        2,
+        1,
+        4
+      ],
+      "age": 18,
+      "class": "15"
+    }
+  ]
+}

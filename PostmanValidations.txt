@@ -1,0 +1,25 @@
+//Test the response(Status code) of the GET request
+pm.test("Status code is 200", ()=>{
+    pm.response.to.have.status(200);
+});
+
+//check the status code is 201 or 200
+pm.test("Successfull post request", () => {
+    pm.expect(pm.response.code).to.oneOf([201, 200]);
+});
+
+//check the status Created
+pm.test("Status Created", () => {
+    pm.response.to.have.status("Created");
+});
+
+//Validate header
+pm.test("Status code is 200",()=>{
+    pm.response.to.have.header("content-type");
+});
+
+//Validate content-type Application/json
+pm.test("Content-Type hearder in Application/Json",()=>{
+    pm.expect(pm.response.headers.get("content-type")).to.eql("application/json");
+});
+

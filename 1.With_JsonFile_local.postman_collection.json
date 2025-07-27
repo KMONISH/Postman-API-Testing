@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "99126d0a-1c60-41ca-9cde-44633a753783",
+		"name": "1.With_JsonFile_local",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16989118"
+	},
+	"item": [
+		{
+			"name": "GET_INFO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/students/35c4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students",
+						"35c4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"firstName\": \"Monish\",\r\n      \"lastName\": \"Tek\",\r\n      \"fullName\": \"Amit Tek\",\r\n      \"fatherName\": \"Mr.Tek\",\r\n      \"grades\": [\r\n        2,\r\n        1,\r\n        4\r\n      ],\r\n      \"age\": 18,\r\n      \"class\": \"15\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/students/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"002\",\r\n    \"firstName\": \"Bharat\",\r\n    \"lastName\": \"Badera\",\r\n    \"fullName\": \"Bharat Badera\",\r\n    \"fatherName\": \"Radhe Badea\",\r\n    \"grades\": [\r\n        2.1,\r\n        4.6,\r\n        4\r\n    ],\r\n    \"age\": 14,\r\n    \"class\": \"9\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/students/002",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students",
+						"002"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/students/35c4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students",
+						"35c4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://mocki.io/fake-json-api",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://mocki.io/fake-json-api",
+					"protocol": "https",
+					"host": [
+						"mocki",
+						"io"
+					],
+					"path": [
+						"fake-json-api"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

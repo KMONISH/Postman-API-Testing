@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "fe83da84-a494-4fc5-b2a0-a6a039c12c5d",
+		"name": "2.Local_Testing Scripts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16989118"
+	},
+	"item": [
+		{
+			"name": "GET_INFO",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Test the response(Status code) of the GET request\r",
+							"pm.test(\"Status code is 200\", ()=>{\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/students/ea42",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students",
+						"ea42"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//check the status code is 201 or 200\r",
+							"pm.test(\"Successfull post request\", () => {\r",
+							"    pm.expect(pm.response.code).to.oneOf([201, 200]);\r",
+							"});\r",
+							"//check the status Created\r",
+							"pm.test(\"Status Created\", () => {\r",
+							"    pm.response.to.have.status(\"Created\");\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"firstName\": \"Testing API\",\r\n      \"lastName\": \"Tekfa\",\r\n      \"fullName\": \"Amit Tekfa\",\r\n      \"fatherName\": \"Tekfa\",\r\n      \"grades\": [\r\n        2,\r\n        1,\r\n        4\r\n      ],\r\n      \"age\": 18,\r\n      \"class\": \"15\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/students/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Validate header\r",
+							"pm.test(\"Status code is 200\",()=>{\r",
+							"    pm.response.to.have.header(\"content-type\");\r",
+							"});\r",
+							"\r",
+							"//Validate content-type Application/json\r",
+							"pm.test(\"Content-Type hearder in Application/Json\",()=>{\r",
+							"    pm.expect(pm.response.headers.get(\"content-type\")).to.eql(\"application/json\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"002\",\r\n    \"firstName\": \"Bharat\",\r\n    \"lastName\": \"Badera\",\r\n    \"fullName\": \"Bharat Badera\",\r\n    \"fatherName\": \"R Badea\",\r\n    \"grades\": [\r\n        2.1,\r\n        4.6,\r\n        4\r\n    ],\r\n    \"age\": 14,\r\n    \"class\": \"9\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/students/002",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students",
+						"002"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// pm.test(\"Response time is less than 200ms \", function () {  \r",
+							"pm.test(\"Response time is less than 20ms \", ()=> {    \r",
+							"    pm.expect(pm.response.responseTime).to.be.below(10);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/students/616c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students",
+						"616c"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
